@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Resume Analyzer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="bg"></div>
+
+  <div class="container">
+    <h1>🚀 HIRESENSE</h1>
+    <p class="subtitle">Resume Analyzer</p>
+    <p class="subtitle">Analyze your resume like an ATS system</p>
+
+    <div class="card">
+      <input type="file" id="resumeFile">
+
+      <textarea id="jd" placeholder="Paste Job Description here..."></textarea>
+
+      <button onclick="analyzeResume()">Analyze Resume</button>
+    </div>
+
+    <div id="loader" class="loader hidden"></div>
+
+    <div id="result" class="result hidden">
+      <h2 id="score"></h2>
+
+      <div class="grid">
+        <div>
+          <h3>❌ Missing Skills</h3>
+          <ul id="missing"></ul>
+        </div>
+
+        <div>
+          <h3>💡 Suggestions</h3>
+          <ul id="suggestions"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
